@@ -1,8 +1,16 @@
 /*This program prints and returns 0*/
-#include <stdio.h>
+#include "main.h"
 
-main ()
+int main(void)
 {
-	print("_putchar\n");
-	return 0;
+	char string[9] = "_putchar";
+	int i = 0;
+
+	for (i=0;i<8;i++)
+	{
+		_putchar(string[i]);
+	}
+	_putchar("\n");
+
+	return (0);
 }
