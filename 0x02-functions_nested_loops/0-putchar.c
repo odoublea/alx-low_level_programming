@@ -1,5 +1,12 @@
-/*This program prints and returns 0*/
 #include "main.h"
+
+/**
+* main - prints _putchar
+*
+* Description: This program prints _putchar
+*
+* Return 0 (Success)
+*/
 
 int main(void)
 {
