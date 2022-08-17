@@ -4,25 +4,20 @@
 
 """
 
+
 def island_perimeter(grid):
-    """return the perimeter of the island"""
+    """ Island_perimeter """
     perimeter = 0
-    first = 0
-    island = 0
-    if grid is None:
-        return 0
-    elif grid == [[]]:
-        return 0
-    else:
-        for zone in grid:
-            for land in zone:
-                if land == 1:
-                    island = 1
-                    if first == 0:
-                        first = 1
-                        perimeter += 3
-                    else:
-                        perimeter += 2
-        if island == 1:
-            perimeter += 1
+
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j] == 1:
+                if grid[i - 1][j] == 0 or i == 0:
+                    perimeter += 1
+                if i == len(grid) - 1 or grid[i + 1][j] == 0:
+                    perimeter += 1
+                if grid[i][j - 1] == 0 or j == 0:
+                    perimeter += 1
+                if j == len(grid[i]) - 1 or grid[i][j + 1] == 0:
+                    perimeter += 1
     return perimeter
