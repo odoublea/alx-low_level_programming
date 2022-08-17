@@ -4,7 +4,7 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = rm
+RM = RM
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 .PHONY = all clean oclean fclean re
