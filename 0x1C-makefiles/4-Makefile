@@ -1,4 +1,4 @@
-# make -f 3-Makefile
+# make -f 4-Makefile
 
 CC = gcc
 SRC = main.c school.c
