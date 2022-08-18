@@ -4,20 +4,17 @@
 
 """
 
-
 def island_perimeter(grid):
-    """ Island_perimeter """
+    """Island Perimeter """
     perimeter = 0
-
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if grid[i][j] == 1:
-                if grid[i - 1][j] == 0 or i == 0:
-                    perimeter += 1
-                if i == len(grid) - 1 or grid[i + 1][j] == 0:
-                    perimeter += 1
-                if grid[i][j - 1] == 0 or j == 0:
-                    perimeter += 1
-                if j == len(grid[i]) - 1 or grid[i][j + 1] == 0:
-                    perimeter += 1
+    r,c = len(grid), len(grid[0])
+    for i in range(r):
+        for j in range(c):
+            if grid[i][j] == 0: continue
+            perimeter += 4
+            if i > 0: perimeter -= grid[i-1][j]
+            if j > 0: perimeter -= grid[i][j-1]
+            if i < r-1: perimeter -= grid[i+1][j]
+            if j < c-1: perimeter -= grid[i][j+1]
     return perimeter
+
