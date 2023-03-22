@@ -5,7 +5,7 @@
 all: target
 
 CC = gcc
-SRC := $(wildcard *.c)
+SRC = main.c school.c
 
 target:
 	${CC} ${SRC} -o school
