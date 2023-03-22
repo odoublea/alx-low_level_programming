@@ -1,0 +1,18 @@
+# The first useful Makefile
+# 
+# executable: school
+# rules: all
+#
+# variables
+# 	CC: Compiler to be used
+# 	SRC: the .c files
+# 	OBJ: the .o files
+# 	NAME: name of the executable
+
+CC = gcc
+SRC = main.c school.c
+OBJ := $(SRC:.c=.o)
+NAME = school
+
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
