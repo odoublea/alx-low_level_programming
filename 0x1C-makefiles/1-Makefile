@@ -4,8 +4,8 @@
 
 all: target
 
-CC = gcc			# compiler to be used
-SRC := $(wildcard *.c)		# the .c file
+CC = gcc
+SRC := $(wildcard *.c)
 
 target:
 	${CC} ${SRC} -o school
