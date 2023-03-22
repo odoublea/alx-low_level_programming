@@ -1,0 +1,11 @@
+# My Makefile
+#
+# Rules: all
+
+all: target
+
+CC = gcc			# compiler to be used
+SRC := $(wildcard *.c)		# the .c file
+
+target:
+	${CC} ${SRC} -o school
