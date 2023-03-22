@@ -9,10 +9,12 @@
 # 	OBJ: the .o files
 # 	NAME: name of the executable
 
+all: target
+
 CC = gcc
 SRC = main.c school.c
 OBJ := $(SRC:.c=.o)
 NAME = school
 
-all: ${OBJ}
+target: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
