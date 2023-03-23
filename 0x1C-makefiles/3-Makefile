@@ -16,8 +16,6 @@
 # 	NAME: name of the executable
 # 	RM: the program to delete files
 
-.DEFAULT_GOAL := all
-
 CC = gcc
 SRC = main.c school.c
 OBJ := $(SRC:.c=.o)
@@ -25,10 +23,10 @@ NAME = school
 RM = rm -f
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o ${NAME}
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ ${NAME}
 
 oclean:
 	$(RM) $(OBJ)
