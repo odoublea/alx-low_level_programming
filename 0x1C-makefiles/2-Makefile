@@ -10,8 +10,8 @@
 # 	NAME: name of the executable
 
 CC = gcc
-SRC = $(wildcard *.c)
-OBJ := $(SRC:.c=.o)
+SRC = main.c school.c
+OBJ := $(wildcard *.o)
 NAME = school
 
 all: ${OBJ}
