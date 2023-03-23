@@ -14,5 +14,6 @@ SRC = main.c school.c
 OBJ := $(SRC:.c=.o)
 NAME = school
 
-all: ${OBJ}
+all1: target
+target: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
