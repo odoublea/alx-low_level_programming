@@ -1,22 +1,3 @@
-# The first useful Makefile
-# 
-# executable: school
-# rules:
-# 	all - builds executable
-# 	clean - deletes all Emacs and Vim temporary files
-# 	oclean - deletes all objects files
-# 	fclean - deletes all Emacs and Vim temporary, the executable
-# 		and the object files
-# 	re - forces recompilation of all source file
-#
-# variables
-# 	CC: Compiler to be used
-# 	SRC: the .c files
-# 	OBJ: the .o files
-# 	NAME: name of the executable
-# 	RM: the program to delete files
-
-
 CC = gcc
 SRC = main.c school.c
 OBJ := $(SRC:.c=.o)
