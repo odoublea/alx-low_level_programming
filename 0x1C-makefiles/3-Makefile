@@ -16,7 +16,7 @@
 # 	NAME: name of the executable
 # 	RM: the program to delete files
 
-.PHONY: all clean oclean fclean re
+.DEFAULT_GOAL := all
 
 CC = gcc
 SRC = main.c school.c
