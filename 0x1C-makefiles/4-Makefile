@@ -15,6 +15,7 @@
 # 	OBJ: the .o files
 # 	NAME: name of the executable
 # 	RM: the program to delete files
+# 	CFLAGS: favorite compiler flags -Wall -Werror -Wextra -pedantic
 
 .PHONY: all clean oclean fclean re
 
@@ -23,9 +24,10 @@ SRC = main.c school.c
 OBJ := $(SRC:.c=.o)
 NAME = school
 RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
+	${CC} ${CFLAGS} ${OBJ} -c -o ${NAME}
 
 clean:
 	${RM} *~ ${NAME}
