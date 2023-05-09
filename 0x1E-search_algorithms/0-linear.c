@@ -4,9 +4,9 @@
  * linear search - searches for a value in an array of
  * integers using the Linear search algorithm
  *
- * @array: input array
- * @size: size of the array
- * @value: value to be searched
+ * @array: pointer to the first element of the array to search
+ * @size: number of elements in array
+ * @value: the value to search for
  *
  * Return: Always EXIT_SUCCESS
  */
