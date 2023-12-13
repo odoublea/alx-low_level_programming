@@ -47,7 +47,7 @@ int exponential_search(int *array, size_t size, int value)
  * Return: index of the number
  */
 
-int binary_search_exp(int *array, size_t l, size_t r, int value)
+int binary_search_exp(int *array, size_t start, size_t bound, int value)
 {
 	size_t i;
 	size_t mid;
