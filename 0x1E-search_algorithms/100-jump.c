@@ -11,10 +11,7 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t jump = sqrt(size);
-	size_t start = 0;
-	size_t end;
-	size_t i;
+	size_t jump = sqrt(size), start = 0, end, i;
 
 	if (array == NULL)
 	{
@@ -41,6 +38,5 @@ int jump_search(int *array, size_t size, int value)
 		}
 	}
 
-	printf("Value %d not found in the array.\n", value);
 	return (-1);
 }
