@@ -4,18 +4,19 @@
  * interpolation_search - calls to interpolation_search to return
  * the index of the number
  *
- * @array: input array
+ * @array: Pointer to the first element of the array
  * @size: size of the array
  * @value: value to search in
- * Return: The first index where value is located, or -1 if not found
+ * Return: Index where value is located, or -1 if not present or array is NULL
  */
 int interpolation_search(int *array, size_t size, int value)
 {
-	int low = 0;
-	int high = size - 1;
-	size_t pos;
+	size_t low = 0, high = size - 1, pos;
 
-	if (array == NULL || size == 0)
+	pos = (low + (((double)(high - low) / (array[high] - array[low]))
+				* (value - array[low])));
+
+	if (array == NULL)
 		return (-1);
 
 	while ((array[high] != array[low]) && (value >= array[low]) &&
