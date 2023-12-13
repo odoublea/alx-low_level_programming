@@ -49,7 +49,6 @@ int binary_search(int *array, size_t size, int value)
 		{
 			/* Return the index if the value is found */
 			return (mid);
-			printf("Found %d at index: %lu\n", value, (unsigned long)mid);
 		}
 	}
 
