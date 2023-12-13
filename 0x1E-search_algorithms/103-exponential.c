@@ -3,7 +3,7 @@
 /**
  * interpolation_search - Searches for a value in a sorted array of integers
  * using the Exponential search algorithm
- * 
+ *
  * @array: Pointer to the first element of the array
  * @size: Number of elements in the array
  * @value: Value to search for
@@ -11,24 +11,24 @@
  */
 int exponential_search(int *array, size_t size, int value)
 {
-    size_t i = 1, bound;
+	size_t i = 1, bound;
 
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    if (array[0] != value)
-    {
-        while (i < size && array[i] <= value)
-        {
-            printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-            i *= 2;
-        }
+	if (array[0] != value)
+	{
+		while (i < size && array[i] <= value)
+		{
+			printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+			i *= 2;
+		}
+	}
 
-    }
-    bound = (i < size) ? i : size - 1;
-    printf("Value found between indexes [%ld] and [%ld]\n", i / 2, bound);
+	bound = (i < size) ? i : size - 1;
+	printf("Value found between indexes [%ld] and [%ld]\n", i / 2, bound);
 
-    return binary_search_exp(array, i/2, bound, value);
+	return (binary_search_exp(array, i / 2, bound, value));
 }
 
 /**
