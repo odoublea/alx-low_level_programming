@@ -23,7 +23,7 @@ int advanced_binary(int *array, size_t size, int value)
     return binary_search(array, 0, size - 1, value);
 }
 
-int binary_search(int *array, size_t l, size_t r, int value)
+int binary_search(int *array, size_t size, int value)
 {
 	size_t i;
 	size_t mid;
