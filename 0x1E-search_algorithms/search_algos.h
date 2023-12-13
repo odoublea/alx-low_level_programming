@@ -1,5 +1,5 @@
-#ifndef _SEARCH_ALGOS_H_
-#define _SEARCH_ALGOS_H_
+#ifndef SEARCH_ALGORITHM
+#define SEARCH_ALGORITHM
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,12 +25,11 @@ int advanced_binary(int *array, size_t size, int value);
  */
 typedef struct listint_s
 {
-    int n;
-    size_t index;
-    int value;
-    struct listint_s *next;
+	int n;
+	size_t index;
+	int value;
+	struct listint_s *next;
 } listint_t;
-
 listint_t *jump_list(listint_t *list, size_t size, int value);
 
 #endif
