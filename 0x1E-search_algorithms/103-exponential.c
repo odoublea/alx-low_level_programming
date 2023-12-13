@@ -57,23 +57,23 @@ int binary_search_exp(int *array, size_t start, size_t bound, int value)
 	/* Return -1 if the array is NULL */
 
 
-	while (l <= r)
+	while (start <= bound)
 	{
 		printf("Searching in array: ");
-		for (i = l; i < r; i++)
+		for (i = start; i < bound; i++)
 		{
 			printf("%d, ", array[i]);
 		}
 		printf("%d\n", array[i]);
 
-		mid = l + (r - l) / 2;
+		mid = start + (bound - start) / 2;
 
 		if (array[mid] < value)
 		{
-			l = mid + 1;
+			start = mid + 1;
 		} else if (array[mid] > value)
 		{
-			r = mid - 1;
+			bound = mid - 1;
 		}
 		else
 		{
