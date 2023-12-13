@@ -7,7 +7,7 @@
  * @array: input array
  * @size: size of the array
  * @value: value to search in
- * Return: index of the number
+ * Return: The first index where value is located, or -1 if not found
  */
 int jump_search(int *array, size_t size, int value)
 {
