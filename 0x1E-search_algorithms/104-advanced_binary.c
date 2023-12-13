@@ -1,62 +1,46 @@
 #include "search_algos.h"
 
 /**
- * binary_search - calls to binary_search to return
- * the index of the number
+ * advanced_binary - searches for a value in a sorted array
+ * using advanced binary search
  *
- * This function takes a sorted array of integers,
- * its size, and a value to search for. It returns
- * the index of the value if found, or -1 if the value
- * is not present in the array or if the array is NULL.
- *
- * @array: input array
- * @size: size of the array
- * @value: value to search in
- * Return: index of the number
+ * @array: pointer to the first element of the array
+ * @size: number of elements in the array
+ * @value: the value to search for
+ * Return: index where value is located, or -1 if not present or array is NULL
  */
-
 int advanced_binary(int *array, size_t size, int value)
 {
-    if (array == NULL || size == 0)
-        return -1;
-
-    return binary_search(array, 0, size - 1, value);
-}
-
-int binary_search(int *array, size_t size, int value)
-{
-	size_t i;
-	size_t mid;
+	size_t i, mid;
+	int result;
 
 	if (array == NULL)
 		return (-1);
-	/* Return -1 if the array is NULL */
 
+	printf("Searching in array: ");
 
-	while (l <= r)
+	for (i = 0; i < size; i++)
+		printf("%d%s", array[i], i == size - 1 ? "\n" : ", ");
+
+	if (size == 1 && array[0] != value)
+		return (-1);
+
+	mid = (size - 1) / 2;
+
+	if (array[mid] == value)
 	{
-		printf("Searching in array: ");
-		for (i = l; i < r; i++)
-		{
-			printf("%d, ", array[i]);
-		}
-		printf("%d\n", array[i]);
-
-		mid = l + (r - l) / 2;
-
-		if (array[mid] < value)
-		{
-            return (binary_search(array, mid + 1, end, value));
-		} else if (array[mid] > value)
-		{
-			r = mid - 1;
-		}
-		else
-		{
-			/* Return the index if the value is found */
+		if (mid == 0 || array[mid - 1] != value)
 			return (mid);
-		}
 	}
+
+	if (array[mid] < value)
+	{
+		result = (advanced_binary(array + mid + 1, size - mid - 1, value));
+		if (result != -1)
+			return (result + mid + 1);
+	}
+	else
+		return (advanced_binary(array, mid + 1, value));
 
 	return (-1);
 }
