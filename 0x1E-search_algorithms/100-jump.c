@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <math.h>
 
 /**
  * jump_search - calls to jump_search to return
@@ -10,7 +9,6 @@
  * @value: value to search in
  * Return: index of the number
  */
-
 int jump_search(int *array, size_t size, int value)
 {
 	size_t jump = sqrt(size);
