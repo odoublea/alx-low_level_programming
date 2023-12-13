@@ -54,7 +54,7 @@ int binary_search_exp(int *array, size_t start, size_t bound, int value)
 }
 
 /**
- * interpolation_search - Searches for a value in a sorted array of integers
+ * exponential_search - Searches for a value in a sorted array of integers
  * using the Exponential search algorithm
  *
  * @array: Pointer to the first element of the array
